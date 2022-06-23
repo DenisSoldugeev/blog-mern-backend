@@ -13,6 +13,7 @@ import {
 	getOne,
 	remove,
 	update,
+	getLastTags
 } from "./controllers/PostController.js";
 
 mongoose
@@ -71,6 +72,7 @@ app.patch(
 	handleValidationsErrors,
 	update
 );
+app.get("/tags", getLastTags);
 
 app.listen(4444, (err) => {
 	if (err) {
